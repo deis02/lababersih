@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Keuangan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profit Card -->
+        <div class="card profit-card">
+            <div class="profit-item">
+                <div class="profit-icon up"><i class="fas fa-arrow-up"></i></div>
+                <div class="profit-details">
+                    <div class="profit-label">Laba Bersih</div>
+                    <div class="profit-amount">Rp<span id="labaBersih">0</span></div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="profit-item">
+                <div class="profit-icon down"><i class="fas fa-arrow-up"></i></div>
+                <div class="profit-details">
+                    <div class="profit-label">Laba Kotor</div>
+                    <div class="profit-amount">Rp<span id="labaKotor">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Selection -->
+        <div class="section-title">Pilih Product</div>
+        <div class="select-container">
+            <select id="productSelect">
+                <option value="" selected disabled>Pilih product</option>
+                <!-- Produk akan ditambahkan secara dinamis -->
+            </select>
+        </div>
+        <button id="addProductBtn" class="add-product-btn">Tambah produk</button>
+
+        <!-- Monthly Summary -->
+        <div class="section-title">Ringkasan bulanan</div>
+        <div class="date-selector" id="monthSelector">
+            <div class="date-text" id="selectedMonth">Januari 2025</div>
+            <div class="calendar-icon"><i class="far fa-calendar"></i></div>
+        </div>
+
+        <!-- Profit Summary -->
+        <div class="profit-summary-container">
+            <div class="profit-summary-card">
+                <div class="summary-label">Laba Bersih</div>
+                <div class="summary-amount">Rp<span id="monthlyLabaBersih">0</span></div>
+            </div>
+            <div class="profit-summary-card">
+                <div class="summary-label">Laba Kotor</div>
+                <div class="summary-amount">Rp<span id="monthlyLabaKotor">0</span></div>
+            </div>
+        </div>
+
+        <!-- Transaction List -->
+        <div id="transactionList">
+            <!-- Transaksi akan ditambahkan secara dinamis -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Month Picker Modal -->
+    <div id="monthPickerModal" class="month-picker-container" style="display:none;">
+        <div class="month-picker">
+            <div class="month-picker-header">
+                <button id="prevYearBtn">&lt;</button>
+                <span id="yearDisplay">2025</span>
+                <button id="nextYearBtn">&gt;</button>
+            </div>
+            <div class="month-grid" id="monthGrid">
+                <!-- Bulan akan diisi lewat JS -->
+            </div>
+            <button class="close-btn" id="closeMonthPicker">Tutup</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
